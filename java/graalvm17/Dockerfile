@@ -7,6 +7,7 @@ RUN         microdnf upgrade --assumeyes
 
 USER        container
 ENV         USER=container HOME=/home/container
+ENV         JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8"
 
 WORKDIR     /home/container
 COPY        ./../entrypoint.sh /entrypoint.sh
